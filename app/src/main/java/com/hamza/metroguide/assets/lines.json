@@ -1,0 +1,8 @@
+{
+  "lines": [
+    { "id": "red", "name": "Red Line", "color": "#E53935" },
+    { "id": "orange", "name": "Orange Line", "color": "#FB8C00" },
+    { "id": "green", "name": "Green Line", "color": "#43A047" },
+    { "id": "blue", "name": "Blue Line", "color": "#1E88E5" }
+  ]
+}

@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.devtools.ksp")
+    kotlin("plugin.serialization") version "2.0.21"
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -57,4 +60,18 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    //Room Database
+    implementation("androidx.room:room-runtime:2.8.5")
+    ksp("androidx.room:room-compiler:2.8.5")
+
+    //kotlin serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
+    //navigation
+    implementation("androidx.navigation:navigation-compose:2.10.2")
+    //ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.11.0")
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.57.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.57.1")
 }
